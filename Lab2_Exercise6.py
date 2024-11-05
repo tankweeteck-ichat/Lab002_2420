@@ -41,8 +41,10 @@ def sort_temperature(inputlist):
     return inputlist
 
 
-def calc_median_temperature(sortedlist):
+def calc_median_temperature(inputlist):
     print("calc_median_temperature")
+    sortedlist = inputlist.copy()
+    sortedlist.sort()
     cnt = len(sortedlist)
     print("cnt=", cnt)
     if cnt%2 == 1:  # No. of elements i list is odd.
@@ -50,6 +52,7 @@ def calc_median_temperature(sortedlist):
     else:
         median = (sortedlist[cnt//2 - 1] + sortedlist[cnt//2])/2
     print("Median = ", median)
+    return median
 
 
 
