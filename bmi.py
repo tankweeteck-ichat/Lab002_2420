@@ -10,9 +10,22 @@ def calculate_bmi(height, weight):
     print("Weight Classification = ", end="")  # Use the end="" to suppress the newline
     if bmi<18.5:
         print("Under Weight")
+        return -1
     elif bmi>25.0:
         print("Over Weight")
+        return 1
     else:
         print("Normal Weight")
+        return 0
 
-calculate_bmi(weight=57, height=1.73)
+
+print("-------------------------")
+result = calculate_bmi(weight=37, height=1.73)
+print("Result = ", result)
+print("-------------------------")
+result = calculate_bmi(weight=57, height=1.73)
+print("Result = ", result)
+print("-------------------------")
+result = calculate_bmi(weight=77, height=1.73)
+print("Result = ", result)
+print("-------------------------")
